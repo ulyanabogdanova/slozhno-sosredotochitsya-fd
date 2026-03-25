@@ -183,6 +183,10 @@ article {
   margin: 0 0 10px 0;
 }
 
+.sub-header-light {
+  font-weight: 400;
+}
+
 .section__text {
   color: var(--text-main-color);
   font-family: var(--font-family);
@@ -291,21 +295,23 @@ article {
 /* мобильный — до 768px */
 @media (width < 768px) {
   .header {
-    min-height: 100dvh;
+    min-height: 668px;
     grid-template-rows: min-content 1fr min-content;
     justify-items: start;
     padding-block-start: 0;
+    padding-block-end: 0;
+    margin-block-end: 0;
   }
 
   .header__theme-menu {
     justify-self: end;
     align-self: start;
-    margin-block-start: 21%;
+    margin-block-start: 75px;
   }
 
   .header__topic-name {
     align-self: start;
-    margin-block-start: 20%;
+    margin-block-start: 70px;
     margin-inline-start: -1px;
   }
 
@@ -315,19 +321,28 @@ article {
     justify-content: start;
     justify-self: start;
     align-self: end;
-    margin-block-end: 16%;
+    margin-block-end: 67px;
   }
 
-  .what {
-    margin-block-start: -28px;
+  .decorated-element::after {
+    bottom: auto;
+    top: calc(100vh - 35px);
   }
 
-  .how {
-    margin-block-start: -27px;
+  .why .section__header {
+    margin-bottom: 16px;
   }
 
-  .image-section {
-    margin-block-start: -27px;
+  .what .section__header {
+    margin-top: 11px;
+  }
+
+  .how .section__header {
+    margin-top: 10px;
+  }
+
+  .image-section__header {
+    margin-top: 20px;
   }
 
   .footer {
@@ -390,7 +405,7 @@ article {
   .what {
     display: grid;
     column-gap: 20px;
-    margin-top: 60px;
+    margin-top: 55px;
     align-items: start;
   }
 
@@ -408,7 +423,7 @@ article {
   }
 
   .how {
-    margin-top: 55px;
+    margin-top: 50px;
     grid-template-columns: 1fr 2fr;
     column-gap: 20px;
   }
@@ -527,7 +542,7 @@ article {
   .what {
     display: grid;
     column-gap: 20px;
-    margin-top: 60px;
+    margin-top: 55px;
     align-items: start;
   }
 
@@ -559,7 +574,7 @@ article {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     max-width: 100%;
-    margin-top: 60px;
+    margin-top: 55px;
   }
 
   .image-section__header {
